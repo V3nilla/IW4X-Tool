@@ -53,11 +53,14 @@ namespace IW4X_Fps_Boost
         {
             if (FPSBoost.Checked)
             {
-                m.WriteMemory("base+60064C0", "int", "0");
-                m.WriteMemory("base+6008CC0", "int", "0");
+                m.FreezeValue("base+60064C0", "int", "0");
+                m.FreezeValue("base+6008CC0", "int", "0");
             }
             else
             {
+                m.UnfreezeValue("base+60064C0");
+                m.UnfreezeValue("base+6008CC0");
+                Thread.Sleep(200);
                 m.WriteMemory("base+60064C0", "int", "1");
                 m.WriteMemory("base+6008CC0", "int", "1");
             }
@@ -67,14 +70,21 @@ namespace IW4X_Fps_Boost
         {
             if (ProcOpen)
             {
-            m.WriteMemory("base+60064C0", "int", "1");
-            m.WriteMemory("base+6008CC0", "int", "1");
-            m.WriteMemory("base+60119B0", "float", "8");
-            m.WriteMemory("base+6011C30", "float", "8");
-            m.WriteMemory("base+60126D0", "float", "0.5");
-            m.WriteMemory("base+6014520", "float", "176");
-            m.WriteMemory("base+6014530", "float", "176");
-            Environment.Exit(0);
+                m.UnfreezeValue("base+60064C0");
+                m.UnfreezeValue("base+6008CC0");
+                m.UnfreezeValue("base+60119B0");
+                m.UnfreezeValue("base+6011C30");
+                m.UnfreezeValue("base+60126D0");
+                m.UnfreezeValue("base+6014520");
+                m.UnfreezeValue("base+6014530");
+                m.WriteMemory("base+60064C0", "int", "1");
+                m.WriteMemory("base+6008CC0", "int", "1");
+                m.WriteMemory("base+60119B0", "float", "8");
+                m.WriteMemory("base+6011C30", "float", "8");
+                m.WriteMemory("base+60126D0", "float", "0.5");
+                m.WriteMemory("base+6014520", "float", "176");
+                m.WriteMemory("base+6014530", "float", "176");
+                Environment.Exit(0);
             }
             else
             {
@@ -86,12 +96,16 @@ namespace IW4X_Fps_Boost
         {
             if (Bob.Checked)
             {
-                m.WriteMemory("base+60119B0", "float", "0");
-                m.WriteMemory("base+6011C30", "float", "0");
-                m.WriteMemory("base+60126D0", "float", "0");
+                m.FreezeValue("base+60119B0", "float", "0");
+                m.FreezeValue("base+6011C30", "float", "0");
+                m.FreezeValue("base+60126D0", "float", "0");
             }
             else
             {
+                m.UnfreezeValue("base+60119B0");
+                m.UnfreezeValue("base+6011C30");
+                m.UnfreezeValue("base+60126D0");
+                Thread.Sleep(200);
                 m.WriteMemory("base+60119B0", "float", "8");
                 m.WriteMemory("base+6011C30", "float", "8");
                 m.WriteMemory("base+60126D0", "float", "0.5");
@@ -102,11 +116,14 @@ namespace IW4X_Fps_Boost
         {
             if (Lunge.Checked)
             {
-                m.WriteMemory("base+6014520", "float", "9999");
-                m.WriteMemory("base+6014530", "float", "9999");
+                m.FreezeValue("base+6014520", "float", "9999");
+                m.FreezeValue("base+6014530", "float", "9999");
             }
             else
             {
+                m.UnfreezeValue("base+6014520");
+                m.UnfreezeValue("base+6014530");
+                Thread.Sleep(200);
                 m.WriteMemory("base+6014520", "float", "176");
                 m.WriteMemory("base+6014530", "float", "176");
             }
