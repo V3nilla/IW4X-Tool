@@ -65,6 +65,8 @@ namespace IW4X_Fps_Boost
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (ProcOpen)
+            {
             m.WriteMemory("base+60064C0", "int", "1");
             m.WriteMemory("base+6008CC0", "int", "1");
             m.WriteMemory("base+60119B0", "float", "8");
@@ -73,6 +75,11 @@ namespace IW4X_Fps_Boost
             m.WriteMemory("base+6014520", "float", "176");
             m.WriteMemory("base+6014530", "float", "176");
             Environment.Exit(0);
+            }
+            else
+            {
+                Environment.Exit(0);
+            }
         }
 
         private void Bob_CheckedChanged(object sender, EventArgs e)
