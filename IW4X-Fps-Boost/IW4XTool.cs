@@ -84,10 +84,12 @@ namespace IW4X_Fps_Boost
                 m.WriteMemory("base+60126D0", "float", "0.5");
                 m.WriteMemory("base+6014520", "float", "176");
                 m.WriteMemory("base+6014530", "float", "176");
+                Application.Exit();
                 Environment.Exit(0);
             }
             else
             {
+                Application.Exit();
                 Environment.Exit(0);
             }
         }
