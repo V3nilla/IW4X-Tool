@@ -55,13 +55,16 @@ namespace IW4X_Fps_Boost
             {
                 m.FreezeValue("base+60064C0", "int", "0");
                 m.FreezeValue("base+6008CC0", "int", "0");
+                m.FreezeValue("base+6009080", "int", "0");
             }
             else
             {
                 m.UnfreezeValue("base+60064C0");
                 m.UnfreezeValue("base+6008CC0");
+                m.UnfreezeValue("base+6009080");
                 m.WriteMemory("base+60064C0", "int", "1");
                 m.WriteMemory("base+6008CC0", "int", "1");
+                m.WriteMemory("base+6009080", "int", "1");
             }
         }
 
