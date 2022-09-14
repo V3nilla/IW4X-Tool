@@ -79,6 +79,7 @@ namespace IW4X_Fps_Boost
                 m.UnfreezeValue("base+60126D0");
                 m.UnfreezeValue("base+6014520");
                 m.UnfreezeValue("base+6014530");
+                m.UnfreezeValue("base+6009080");
                 m.WriteMemory("base+60064C0", "int", "1");
                 m.WriteMemory("base+6008CC0", "int", "1");
                 m.WriteMemory("base+60119B0", "float", "8");
@@ -86,6 +87,7 @@ namespace IW4X_Fps_Boost
                 m.WriteMemory("base+60126D0", "float", "0.5");
                 m.WriteMemory("base+6014520", "float", "176");
                 m.WriteMemory("base+6014530", "float", "176");
+                m.WriteMemory("base+6009080", "int", "1");
                 Application.Exit();
                 Environment.Exit(0);
             }
