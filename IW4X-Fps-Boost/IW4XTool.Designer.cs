@@ -35,6 +35,7 @@
             this.FPSBoost = new System.Windows.Forms.CheckBox();
             this.Bob = new System.Windows.Forms.CheckBox();
             this.Lunge = new System.Windows.Forms.CheckBox();
+            this.Filmtweaks = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // BGWorker
@@ -105,12 +106,26 @@
             this.Lunge.UseVisualStyleBackColor = false;
             this.Lunge.CheckedChanged += new System.EventHandler(this.Lunge_CheckedChanged);
             // 
+            // Filmtweaks
+            // 
+            this.Filmtweaks.AutoSize = true;
+            this.Filmtweaks.BackColor = System.Drawing.Color.White;
+            this.Filmtweaks.ForeColor = System.Drawing.Color.Black;
+            this.Filmtweaks.Location = new System.Drawing.Point(15, 93);
+            this.Filmtweaks.Name = "Filmtweaks";
+            this.Filmtweaks.Size = new System.Drawing.Size(118, 17);
+            this.Filmtweaks.TabIndex = 5;
+            this.Filmtweaks.Text = "Enable FilmTweaks";
+            this.Filmtweaks.UseVisualStyleBackColor = false;
+            this.Filmtweaks.CheckedChanged += new System.EventHandler(this.Filmtweaks_CheckedChanged);
+            // 
             // IW4XTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowText;
-            this.ClientSize = new System.Drawing.Size(300, 96);
+            this.ClientSize = new System.Drawing.Size(300, 116);
+            this.Controls.Add(this.Filmtweaks);
             this.Controls.Add(this.Lunge);
             this.Controls.Add(this.Bob);
             this.Controls.Add(this.FPSBoost);
@@ -136,6 +151,7 @@
         private System.Windows.Forms.CheckBox FPSBoost;
         private System.Windows.Forms.CheckBox Bob;
         private System.Windows.Forms.CheckBox Lunge;
+        private System.Windows.Forms.CheckBox Filmtweaks;
     }
 }
 

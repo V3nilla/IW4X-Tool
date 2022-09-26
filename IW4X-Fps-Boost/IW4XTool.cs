@@ -80,6 +80,7 @@ namespace IW4X_Fps_Boost
                 m.UnfreezeValue("base+6014520");
                 m.UnfreezeValue("base+6014530");
                 m.UnfreezeValue("base+6009080");
+                m.UnfreezeValue("base+60082C0");
                 m.WriteMemory("base+60064C0", "int", "1");
                 m.WriteMemory("base+6008CC0", "int", "1");
                 m.WriteMemory("base+60119B0", "float", "8");
@@ -88,6 +89,7 @@ namespace IW4X_Fps_Boost
                 m.WriteMemory("base+6014520", "float", "176");
                 m.WriteMemory("base+6014530", "float", "176");
                 m.WriteMemory("base+6009080", "int", "1");
+                m.WriteMemory("base+60082C0", "int", "0");
                 Application.Exit();
                 Environment.Exit(0);
             }
@@ -130,6 +132,19 @@ namespace IW4X_Fps_Boost
                 m.UnfreezeValue("base+6014530");
                 m.WriteMemory("base+6014520", "float", "176");
                 m.WriteMemory("base+6014530", "float", "176");
+            }
+        }
+
+        private void Filmtweaks_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Filmtweaks.Checked)
+            {
+                m.FreezeValue("base+60082C0", "int", "1");
+            }
+            else
+            {
+                m.UnfreezeValue("base+60082C0");
+                m.WriteMemory("base+60082C0", "int", "0");
             }
         }
     }
