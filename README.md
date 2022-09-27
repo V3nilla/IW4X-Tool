@@ -2,7 +2,7 @@
 A simple IW4X Tool for 0.7.5-dev version(commit 7887829)
 ____
 ## About features in this tool
-This tool can disable view, sprint and weapon bobbing, boost your fps on servers which doesnt have FPS Boost .gsc script and Infinite Knife Lunge!
+This tool can disable view, sprint and weapon bobbing, boost your fps on servers which doesnt have FPS Boost .gsc script, infinite knife lunge and enable FilmTweaks!
 ____
 ### Compiling and Installation
 1. You can clone this repository and compile it through **VS 2022**
